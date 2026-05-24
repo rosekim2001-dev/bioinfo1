@@ -1,5 +1,26 @@
 # Own Bioinformatics Project Skeleton
 
+## Quick File Guide (What Each File Is For)
+- `00_docs/project_plan.md`: one-page analysis plan, scope, and milestones.
+- `00_docs/figure_notes.md`: plotting choices, label strategy, and interpretation notes.
+- `01_data/raw/`: input BAM/GTF files (symlinked or copied from class dataset).
+- `01_data/ref/`: optional derived reference files (filtered annotations, index helpers).
+- `01_data/metadata/`: sample sheets and run metadata (condition labels, filenames).
+- `02_scripts/01_prepare_annotation.sh`: builds gene annotation table and gene BED regions from GTF.
+- `02_scripts/02_count_reads.sh`: runs per-assay gene-level read counting (CLIP/RPF/RNA).
+- `02_scripts/03_build_gene_matrix.py`: merges all count outputs into one gene matrix.
+- `02_scripts/04_compute_metrics.py`: computes CLIP enrichment and TE change metrics.
+- `02_scripts/05_go_enrichment.py`: performs GO enrichment on selected gene sets.
+- `02_scripts/06_plot_bubble.py`: creates the final GO bubble-scatter figure.
+- `03_results/counts/`: raw count outputs from `featureCounts` (or equivalent).
+- `03_results/metrics/`: integrated matrix and computed per-gene metrics.
+- `03_results/enrichment/`: GO enrichment result tables and GO-level plotting inputs.
+- `03_results/figures/`: final exported figure files (`.png`, `.pdf`).
+- `03_results/tables/`: intermediate reference tables such as gene annotation and regions.
+- `04_notebooks/own_analysis.ipynb`: notebook version of the full workflow and interpretation.
+- `environment.yml`: reproducible Conda environment specification.
+- `README.md`: project overview, run order, and reproducibility instructions.
+
 ## 1) Project Title
 **Integrated CLIP-seq and Ribosome Profiling Analysis of LIN28A-Related Translational Regulation**
 
